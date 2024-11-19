@@ -1,0 +1,23 @@
+[package]
+name = "openapi_twilio"
+version = "1.0.0"
+authors = ["support@twilio.com"]
+description = "This is the public Twilio REST API."
+license = "Apache 2.0"
+edition = "2021"
+readme = "README.md"
+homepage = "https://github.com/ApheXOK/twilio-rust"
+repository = "https://github.com/ApheXOK/twilio-rust"
+
+[dependencies]
+serde = { version = "^1.0", features = ["derive"] }
+serde_with = { version = "^3.8", default-features = false, features = [
+    "base64",
+    "std",
+    "macros",
+] }
+serde_json = "^1.0"
+serde_repr = "^0.1"
+url = "^2.5"
+uuid = { version = "^1.8", features = ["serde", "v4"] }
+reqwest = { version = "^0.12", features = ["json", "multipart"] }
